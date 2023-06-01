@@ -2,24 +2,32 @@
   <head>
     <h3>202168021 김태무 - 기말 프로젝트 - 예약 페이지</h3>
   </head>
+  <!--이 코드에 사용된 문자열은 이환희 형님의 피드백을 받아서 작성하였습니다.-->
   <body>
-    <h4>대학원 입학날짜 예약하기</h4>
+    <h4>슈퍼 힘찬 대학원 입학날짜 예약하기</h4>
     <pre>
+      <!--신청자의 이름을 정보로 받습니다-->
         이름 : <input type="text" name="StudentName" placeholder="학생 이름"/>
+        <!--신청자의 학과를 정보로 받되, 제시된 학과 중에서 하나를 신청자가 선택해야 합니다.-->
         희망학과 : <select name="Department">
             <option value="Com">컴퓨터공학과</option>
             <option value="Elec">전기공학과</option>
             <option value="Build">건축공학과</option>
         </select>
+        <!--웹 브라우저에 표기된 달력을 클릭하여 사용자에게서 정보를 받아옵니다.-->
         희망날짜 : <input type="date" value="datetime-local"/>
-        담당교수 : <select name="Prof.">
+        <!--'희망학과' 칸과 동일한 방식으로 사용자에게서 정보를 받아옵니다.-->
+        담당선임 : <select name="Prof.">
+            <option value="SKL">이상곤</option>
             <option value="HJJ">장홍준</option>
             <option value="HJM">문홍진</option>
             <option value="DYJ">조동영</option>
             <option value="JSP">박지수</option>
             </select>
+          </select>
+        <!--원래는 '입학신청' 버튼을 누르면 사용자의 정보를 서버로 전송하거나 입력을 취소해야 합니다.-->
         <input type="submit", value="입학신청"/> <input type="reset" value="입력취소"/>
-    
+
     </pre>
   </body>
 </html>
