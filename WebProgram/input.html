@@ -1,33 +1,124 @@
 <!DOCTYPE html>
   <head>
-    <h3>202168021 김태무 - 기말 프로젝트 - 예약 페이지</h3>
-
     <!--html 코드의 인코딩 설정을 utf-8로 해 두겠습니다.-->
     <meta charset="UTF-8">
+    <h3>202168021 김태무 - 기말 프로젝트 - 예약 페이지</h3>
+    <t>이 html 태그의 내용은 실제의 인물, 단체와 무관합니다.</t>
+
+    <!--테이블에 사용할 CSS를 지정합니다-->
+    <style>
+      /* 표의 테두리 스타일을 지정하기 위해 table에 스타일을 적용 */
+      table {
+        border-collapse: collapse; /* 테두리를 겹치지 않게 함 */
+        width: 100%; /* 표의 너비를 100%로 설정 */
+        position: relative; /* 표 요소에 대한 상대적인 위치 설정 */
+      }
+
+      /* 표의 테두리를 그리기 위해 가상 요소(::before, ::after) 활용 */
+      table::before,
+      table::after {
+        content: "";
+        position: absolute;
+        border: 1px solid black; /* 1px 두께의 검은색 실선 테두리를 지정 */
+      }
+
+      /* 가상 요소(::before)를 사용하여 표의 상단 테두리 스타일 지정 */
+      table::before {
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      /* 가상 요소(::after)를 사용하여 표의 하단 테두리 스타일 지정 */
+      table::after {
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      /* 표의 셀들에 테두리 스타일을 적용 */
+      table td,
+      table th {
+        border: 1px solid black; /* 1px 두께의 검은색 실선 테두리를 지정 */
+        padding: 8px; /* 셀의 내용과 테두리 사이의 여백을 지정 */
+        text-align: left; /* 셀의 텍스트를 왼쪽으로 정렬 */
+      }
+    </style>
+
   </head>
-  <!--이 코드에 사용된 문자열은 이환희 형님의 피드백을 받아서 작성하였습니다.-->
-  <!--html 코드는 전부 저에 의해서 작성된 것임을 밝힙니다.-->
+  <!--이 html 코드의 대부분은 저에 의해서 작성된 것임을 밝힙니다.-->
   <body>
-    <h4>슈퍼 힘찬 대학원 입학날짜 예약하기</h4>
+    <h4>슈퍼 힘찬 입학날짜 예약하기</h4>
+    <br>
+    <t>진학 가능한 대학원</t>
+    <!--순서가 정해진 리스트를 사용하여 대학원들을 나열합니다.-->
+    <ol>
+      <li>슈퍼스타를 위한 落성대학원</li>
+      <li>초등학생을 위한 엄석대학원</li>
+      <li>젊은 청년을 위한 努仁대학원</li>
+    </ol>
+    <!--(테이블)표를 이용하여 교수들과 대학원의 연관성을 쉽게 찾을 수 있습니다.-->
+    <table>
+      <tr>
+        <th colspan="4">대학원들 비교</th>
+      </tr>
+      <tr>
+        <th>담당교수</th>
+        <th>落성대학원</th>
+        <th>엄석대학원</th>
+        <th>努仁대학원</th>
+      </tr>
+      <tr>
+        <td>김철수</td>
+        <td>O</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>박영희</td>
+        <td>X</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>유시윤</td>
+        <td>O</td>
+        <td>X</td>
+        <td>O</td>
+      </tr>
+      <tr>
+        <td>이유상</td>
+        <td>O</td>
+        <td>O</td>
+        <td>O</td>
+      </tr>
+      <tr>
+        <td>정윤오</td>
+        <td>X</td>
+        <td>O</td>
+        <td>X</td>
+      </tr>
+      <!--표를 마칩니다.-->
+    </table>
     <pre>
       <!--신청자의 이름을 정보로 받습니다-->
         <form>
           이름 : <input type="text" name="StudentName" placeholder="학생 이름"/>
-        <!--신청자의 학과를 정보로 받되, 제시된 학과 중에서 하나를 신청자가 선택해야 합니다.-->
-        희망학과 : <select name="Department">
-            <option value="Com">컴퓨터공학과</option>
-            <option value="Elec">전기공학과</option>
-            <option value="Build">건축공학과</option>
+          <!--신청자의 학과를 정보로 받되, 제시된 학과 중에서 하나를 신청자가 선택해야 합니다.-->
+          희망 대학원 : <select name="Department">
+            <option value="Down">落성대학원</option>
+            <option value="Seok">엄석대학원</option>
+            <option value="Marin">努仁대학원</option>
         </select>
         <!--웹 브라우저에 표기된 달력을 클릭하여 사용자에게서 정보를 받아옵니다.-->
         희망날짜 : <input type="date" value="datetime-local"/>
         <!--'희망학과' 칸과 동일한 방식으로 사용자에게서 정보를 받아옵니다.-->
-        담당선임 : <select name="Prof.">
-            <option value="SKL">이상곤</option>
-            <option value="HJJ">장홍준</option>
-            <option value="HJM">문홍진</option>
-            <option value="DYJ">조동영</option>
-            <option value="JSP">박지수</option>
+        담당교수 : <select name="Prof.">
+            <option value="Kim">김철수</option>
+            <option value="Hui">박영희</option>
+            <option value="You">유시윤</option>
+            <option value="Lee">이유상</option>
+            <option value="Ouh">정윤오</option>
             </select>
           </select>
         <!--원래는 '입학신청' 버튼을 누르면 사용자의 정보를 서버로 전송하거나 입력을 취소해야 합니다.-->

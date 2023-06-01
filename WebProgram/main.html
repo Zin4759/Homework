@@ -1,235 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>재입대 웹사이트</title>
+  <meta charset="UTF-8">
+  <title>홍보 페이지</title>
   <style>
-    /* CSS 스타일을 여기에 추가하세요 */
+    /* CSS 코드 */
     body {
-      font-family: Arial, sans-serif;
+      /* 홈페이지의 배경색을 설정합니다. */
+      background-color: red;
     }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+    #logo {
+      /*  로고의 색깔과 위치를 설정합니다. */
+      color: yellow;
+      font-size: 24px;
       text-align: center;
+      padding: 20px;
+      position: inherit;
     }
 
-    nav {
-      background-color: #f2f2f2;
-      padding: 10px;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    nav ul li a {
-      color: #333;
-      text-decoration: none;
-      padding: 5px 10px;
-    }
-
-    nav ul li a:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
-    section {
-      margin: 20px;
-    }
-
-    h2 {
-      color: #333;
-    }
-
-    .calendar {
-      /* 달력 스타일을 여기에 추가하세요 */
-    }
-
-    .button {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .form-group {
-      margin-bottom: 10px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .form-group input[type="text"] {
-      width: 100%;
-      padding: 5px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    /* 가상 클래스 및 가상 요소 */
-    a:hover::before {
-      content: ">> ";
-    }
-
-    /* 수평 메뉴와 수직 메뉴 */
-    nav ul {
+    .horizontal-menu {
+      /* display:flex에 의해 가로로 나열됩니다. */
       display: flex;
+      justify-content: center;
+      background-color: white;
+      margin-top: 20px;
     }
 
-    nav ul li {
+    .horizontal-menu a {
+      /* 메뉴 항목들의 내부 여백을 설정합니다. */
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .vertical-menu {
+      /* 수직 메뉴의 너비를 설정합니다. */
+      width: 200px;
+      background-color: white;
+      margin-top: 20px;
+    }
+
+    .vertical-menu a {
+      /* 메뉴의 항목들을 수직으로 나열합니다 */
       display: block;
-      margin-right: 0;
-    }
-
-    /* 드롭다운 서브 메뉴 */
-    nav ul li {
-      position: relative;
-    }
-
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f2f2f2;
-      padding: 5px;
-    }
-
-    nav ul li:hover ul {
-      display: block;
-    }
-
-    /* 리스트 */
-    section ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    /* 표 */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th, td {
-      border: 1px solid #333;
-      padding: 8px;
-      text-align: left;
-    }
-
-    /* 선택자(태그, 아이디, 클래스) */
-    section#about {
-      color: #555;
-    }
-
-    .calendar {
-      background-color: #f2f2f2;
       padding: 10px;
+      text-decoration: none;
+      color: black;
     }
 
-    /* 입력 요소(form, input) */
-    .form-group input[type="text"] {
-      border: 1px solid #333;
-      border-radius: 3px;
+    /* 가상 클래스 */
+    .horizontal-menu a:hover {
+      background-color: lightgray;
+    }
+
+    .vertical-menu a:hover {
+      background-color: lightgray;
     }
   </style>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const navItems = document.querySelectorAll("nav ul li");
-      const sections = document.querySelectorAll("section");
-
-      navItems.forEach(function(item) {
-        item.addEventListener("click", function(event) {
-          event.preventDefault();
-          const target = this.querySelector("a").getAttribute("href");
-          showSection(target);
-        });
-      });
-
-      function showSection(target) {
-        sections.forEach(function(section) {
-          if (section.getAttribute("id") === target.substring(1)) {
-            section.classList.remove("hidden");
-          } else {
-            section.classList.add("hidden");
-          }
-        });
-      }
-    });
-  </script>
 </head>
 <body>
-  <header>
-    <h1>재입대 웹사이트</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#about">재입대에 대하여</a></li>
-      <li><a href="#check-date">재입대 가능 날짜 확인</a></li>
-      <li><a href="#check-unit">재입대 가능 부대 확인</a>
-        <ul>
-          <li><a href="#">육군 훈련소 1</a></li>
-          <li><a href="#">육군 훈련소 2</a></li>
-          <li><a href="#">육군 훈련소 3</a></li>
-          <!-- 나열할 훈련소들을 여기에 추가하세요 -->
-        </ul>
-      </li>
-      <li><a href="#application">재입대 신청</a></li>
-    </ul>
-  </nav>
-  <section id="about">
-    <h2>재입대에 대하여</h2>
-    <p>군대를 갔다온 청년들에게 재입대를 장려하는 내용을 여기에 적어주세요.</p>
-  </section>
-  <section id="check-date">
-    <h2>재입대 가능 날짜 확인</h2>
-    <div class="calendar">
-      <ul>
-        <li>XXXX년 XX월 XX일</li>
-        <li>XXXX년 XX월 XX일</li>
-        <li>XXXX년 XX월 XX일</li>
-        <li>XXXX년 XX월 XX일</li>
-      </ul>
-    </div>
-  </section>
-  <section id="check-unit">
-    <h2>재입대 가능 부대 확인</h2>
-    <ul>
-      <li>육군 훈련소 1</li>
-      <li>육군 훈련소 2</li>
-      <li>육군 훈련소 3</li>
-      <!-- 나열할 훈련소들을 여기에 추가하세요 -->
-    </ul>
-  </section>
-  <section id="application">
-    <h2>재입대 신청</h2>
-    <form>
-      <div class="form-group">
-        <label for="name">이름:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="unit">출신 부대:</label>
-        <input type="text" id="unit" name="unit" required>
-      </div>
-      <button class="button" type="submit">신청</button>
-    </form>
-  </section>
+  <t>관리자 : 202168021 김태무</t>
+  <div id="logo">림버스 컴퍼니</div>
+
+  <div class="horizontal-menu">
+    <a href="#">이 게임에 대하여</a>
+    <a href="#">누가 이 게임을 플레이하나요?</a>
+  </div>
+
+  <div class="vertical-menu">
+    <a href="#">이상</a>
+    <a href="#">돈키호테</a>
+    <a herf="#">싱클레어</a>
+  </div>
 </body>
 </html>
