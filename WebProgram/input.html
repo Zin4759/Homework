@@ -11,7 +11,8 @@
     <h4>슈퍼 힘찬 대학원 입학날짜 예약하기</h4>
     <pre>
       <!--신청자의 이름을 정보로 받습니다-->
-        이름 : <input type="text" name="StudentName" placeholder="학생 이름"/>
+        <form>
+          이름 : <input type="text" name="StudentName" placeholder="학생 이름"/>
         <!--신청자의 학과를 정보로 받되, 제시된 학과 중에서 하나를 신청자가 선택해야 합니다.-->
         희망학과 : <select name="Department">
             <option value="Com">컴퓨터공학과</option>
@@ -31,7 +32,7 @@
           </select>
         <!--원래는 '입학신청' 버튼을 누르면 사용자의 정보를 서버로 전송하거나 입력을 취소해야 합니다.-->
         <input type="submit", value="입학신청"/> <input type="reset" value="입력취소"/>
-
+      </form>
     </pre>
   </body>
 </html>
