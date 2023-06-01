@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS 스타일링 */
+
+    /* 수평 메뉴 스타일링 */
+    ul.horizontal-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1; /* 배경색 추가 */
+    }
+
+    ul.horizontal-menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    ul.horizontal-menu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333333;
+    }
+
+    ul.horizontal-menu li a:hover {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* 수직 메뉴 스타일링 */
+    ul.vertical-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #f1f1f1; /* 배경색 추가 */
+    }
+
+    ul.vertical-menu li {
+      position: relative; /* 상대위치 설정 */
+    }
+
+    ul.vertical-menu li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333333;
+    }
+
+    ul.vertical-menu li a:hover {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    ul.vertical-menu li ul.sub-menu {
+      display: none;
+      position: absolute; /* 절대위치 설정 */
+      top: 0;
+      left: 200px; /* 부모 li 너비와 동일하게 설정 */
+      width: 200px;
+      background-color: #f1f1f1; /* 배경색 추가 */
+    }
+
+    ul.vertical-menu li:hover ul.sub-menu {
+      display: block;
+    }
+
+    /* 박스 모델 스타일링 */
+    div.box {
+      margin: 10px;
+      padding: 20px;
+      display: inline-block;
+      position: relative;
+      background-color: #f1f1f1;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 리스트 스타일링 */
+    ul.list {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    /* 테이블 스타일링 */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table, th, td {
+      border: 1px solid #333333;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    /* 선택자 스타일링 */
+    h1#title {
+      color: #333333;
+      font-size: 24px;
+    }
+
+    p.description {
+      color: #666666;
+      font-style: italic;
+    }
+
+    /* 입력 요소 스타일링 */
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333333;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="submit"] {
+      padding: 10px;
+      width: 200px;
+    }
+
+    input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML 요소 -->
+
+  <h1 id="title">HTML 페이지</h1>
+
+  <p class="description">이 페이지는 가상 클래스, 가상 요소, 수평 메뉴, 수직 메뉴, 드롭다운 서브 메뉴, 박스 모델의 margin, padding, display, position, 리스트, 테이블 태그, 선택자, 입력 요소를 포함하고 있습니다.</p>
+
+  <!-- 수평 메뉴 -->
+  <ul class="horizontal-menu">
+    <li><a href="#">메뉴 1</a></li>
+    <li><a href="#">메뉴 2</a></li>
+    <li><a href="#">메뉴 3</a></li>
+  </ul>
+
+  <!-- 수직 메뉴 -->
+  <ul class="vertical-menu">
+    <li><a href="#">메뉴 1</a></li>
+    <li><a href="#">메뉴 2</a>
+      <ul class="sub-menu">
+        <li><a href="#">서브 메뉴 1</a></li>
+        <li><a href="#">서브 메뉴 2</a></li>
+        <li><a href="#">서브 메뉴 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">메뉴 3</a></li>
+  </ul>
+
+  <!-- 박스 모델 -->
+  <div class="box">
+    <p>박스 모델</p>
+  </div>
+
+  <!-- 리스트 -->
+  <ul class="list">
+    <li>리스트 항목 1</li>
+    <li>리스트 항목 2</li>
+    <li>리스트 항목 3</li>
+  </ul>
+
+  <!-- 테이블 -->
+  <table>
+    <tr>
+      <th>헤더 1</th>
+      <th>헤더 2</th>
+    </tr>
+    <tr>
+      <td>셀 1-1</td>
+      <td>셀 1-2</td>
+    </tr>
+    <tr>
+      <td>셀 2-1</td>
+      <td>셀 2-2</td>
+    </tr>
+  </table>
+
+  <!-- 입력 요소 -->
+  <form>
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="제출">
+  </form>
+
+</body>
+</html>
