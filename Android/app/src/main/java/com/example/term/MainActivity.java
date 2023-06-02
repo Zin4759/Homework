@@ -1,5 +1,4 @@
-ls
-        package com.example.term;
+package com.example.term;
 
 import androidx.appcompat.app.AppCompatActivity;
 
