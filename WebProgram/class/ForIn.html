@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <head>
+    <h1>202168021 Taemoo Kim</h1>
+  </head>
+  <body>
+    <script>
+        var alphabet = new Array("alpha", "beta", "gamma", "delta", "epsilon");
+
+        alphabet['Z'] = "Zeta"; alphabet['O'] = "Omega";
+        document.write("<h3>for <- print</h3>");
+        for (i=0; i<=alphabet.length; i++) {
+            document.write(alphabet[i]+"<br>");
+        }
+        document.write("<h3>for ~ in <- print</h3>");
+        for (var temp in alphabet) {
+            document.write(alphabet[temp]+'<br>');
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <head>
+    <h1>202168021 Taemoo Kim</h1>
+  </head>
+  <body>
+    <t>This is content</t><br>
+    <hr>
+    <script>
+        var score = new Array();
+        var subject = "Javascripts"
+        score["Web Programming"] = 75;
+        score[subject]= 82;
+        score['project'] = 85;
+
+        document.write("<hr>1.score(Key index) Print");
+        document.write("(1) Array name:"+score+"<br>");
+        document.write("(2) Array size:"+score.length+"<br>");
+        document.write("(3) Print for state:");
+        for (i=0; i<score.length; i++) {
+            document.write(score[i]+"");
+            document.write("-------");
+        }
+        document.write("<br>(4) Print element of array:");
+        document.write(score["Web Programming"]+","+score[subject]);
+        document.write(", "+score['project']+"<hr>");
+    </script>
+  </body>
+</html>

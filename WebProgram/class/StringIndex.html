@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <head>
+    <t>202168021 Taemoo Kim</t>
+  </head>
+
+  <body>
+    <t>This is content</t><br>
+    <hr>
+
+    <form name="form1">
+        Name:<input type="text" name="NameOfStudent"/><br>
+        Korean:<input type="text" name="kor"/><br>
+        Math:<input type="text" name="math"/><br>
+        <button onclick="compute();">Submit</button>
+    </form>
+
+    <script>
+        function compute() {
+            var total;
+            total = parseInt(form1['kor'].value)+parseInt(form1['math'].value);
+            avg = total / 2;
+            alert(form1['NameOfStudent'].value+"Your Result of average is"+avg);
+        }
+    </script>
+  </body>
+</html>
