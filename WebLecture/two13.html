@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <head>
+    <h1>202168021 김태무</h1>
+  </head>
+  <body>
+    <t>Result<br></t>
+    <script>
+        function person(name, year, score1, score2) {
+            this.name = name;
+            this.year = year;
+            this.score1 = score1;
+            this.score2 = score2;
+            this.average = function() {
+                return (this.score1 + this.score2) / 2;
+            }
+        }
+
+        var guy = new person("Roller", 3, 54, 32);
+        var man = new person("Thyer", 6, 87, 65);
+        document.write(guy.name+"'s average is "+guy.average()+".<br>");
+        document.write(man.name+"'s average is "+man.average()+".<br>");
+    </script>
+  </body>
+</html>

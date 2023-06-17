@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <h1>202168021 김태무</h1>
+    <script>
+        var a ="globalA", b="globalB", c="globalC";
+        function f1() {
+            var b="localB";
+            var d = "localD";
+
+            document.write("함수f1()내부에서 출력<br>");
+            document.write("a="+a+"<br>");
+            document.write("b="+b+"<br>");
+            document.write("this.b"+this.b+"<br>");
+            document.write("c="+c+"<br>");
+            document.write("d="+d+"<br>");
+        }
+
+        f1();
+        document.write("함수f1()외부에서 출력<br>");
+        document.write("a="+a+"<br>");
+        document.write("b="+b+"<br>");
+        document.write("this.b"+this.b+"<br>");
+        document.write("c="+c+"<br>");
+        document.write("d="+d+"<br>");
+    </script>
+  </head>
+  <body>
+    <t>전역변수 : 전역해서 병영(선언된 함수)과 사회(함수 바깥)에서 활동가능</t></body><br>
+    <t>지역변수 : 전역을 못해서 병영(선언된 함수)에서만 활동 가능</t><br>
+  </body>
+</html>

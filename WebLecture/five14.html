@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <head>
+    <h1>202168021김태무</h1>
+  </head>
+
+  <body>
+    <script>
+        var obj = new Object();
+        obj.name = "taemoo Kim"; obj.major = "Computer Engineering";
+
+        document.write("Ojb's constructor: ");
+        document.write(obj.constructor+"<br>");
+        document.write("obj's toString():");
+        document.write(obj.toString());
+        document.write("<br>");
+        // toString() 재정의
+        obj.toString = function() {
+            document.write("{name: "+this.name+", major: "+this.major+"}<br>");
+        }
+
+        document.write("obj -> toString():");
+        document.write(obj.toString());
+    </script>
+  </body>
+</html>

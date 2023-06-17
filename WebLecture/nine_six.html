@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <head>
+    // 코딩이 귀찮아서 이전의 소스코드를 우려먹었음.
+    <h1>김태무 9주차 6 a</h1>
+    <script>
+        //주?석
+        var subject1 = "JeonJu";
+        var subject2 = "Place";
+
+        // made now
+        var num1 = 15, num2 = 40;
+        function welcome(target) {
+            document.write("Welcome to " + target);
+        }
+
+        function operate(parm1, parm2) {
+            document.write('FirstResult'+parm1+parm2)+'<br>';
+            document.write('SecondResult'+parm1-parm2+'<br>');
+            document.write('3rdResult'+parm1/parm2);
+            document.write('4rdResult'+parm1++ +40+'<br>');
+        }
+        operate(subject1, subject2);
+        operate(subject1, num1);
+        operate(num1, num2);
+            //변수의 내용을 출력한다.
+    </script>
+  </head>
+
+  <body>
+    <t>내?부, 외?부 인라인 자바스크립트 작성 실습 1</t>
+    <button onclick="welcome(subject1);">JeonJu Univ</button>
+    <button onclick="welcome(subject2);">Where is here?</button>
+  </body>
+</html>

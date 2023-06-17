@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <head>
+    <h1>202168021 김태무</h1>
+  </head>
+  <body>
+    <t>Result<br></t>
+    <script>
+        function f1(f2, n) {
+            document.write("Callback func is called"+n+" times.");
+            for (i=0; i<n; i++) {
+                f2();
+            }
+        }
+
+        var f3 = function () {
+            document.write("Welcome to HTML5!<br>");
+        }
+
+        f1 (f3, 5);
+
+        document.write('<hr>');
+        f1 ( function() {
+            document.write("Welcome to JS!<br>");
+        }, 5);
+    </script>
+  </body>
+</html>

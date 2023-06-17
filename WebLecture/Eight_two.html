@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <style>
+        div {margin:20px; padding:0px; width:350px; height:80px;}
+        div {width: 500px; margin: 0 auto; background: lightcoral;}
+
+        #parent {background: gray; width: 200px; height: 50px;
+            position: relative;
+        }
+
+        #child {
+            background: tomato; width: 210px; height: 40px;
+            position: absolute; left: 100px; top: 25px;
+        }
+
+        #b1 {background: orange;}
+        #b2 {background: greenyellow; text-align: center; position: fixed;}
+        #b3 {
+            background: skyblue; text-align: center; 
+            line-height: 80px; position: absolute;
+            top: 20px; right: 20px;
+        }
+        #b4 {background: orange; margin: 0px 20px; 
+            position: fixed; top: 32px; right: 22px;}
+        #b5 {background: darkgray; position: fixed; top:30px; right: 20px;}
+
+        #container {width: 300px; height:200px;
+        margin:50px 10px;border:2px black dashed}
+
+        .menu {background: blue; width: 150px; height: 40px;}
+        #child .menu:hover {background: skyblue;}
+    </style>
+    <h1>김태무 웹프실습 실패내용</h1>
+  </head>
+
+  <body>
+    <h4>Text</h4>
+    <div>
+        <h3>Test내용</h3>
+
+        <div id="b1">박스</div>
+        <div id="container">
+            <div id="parent">
+                ParentBox
+                <div id="child">CHIldBox</div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
